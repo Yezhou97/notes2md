@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Data & datasets
+dataset/
+finetune/
+lines/
+math/
+text/
+pages/
+predictions/
+blocks/
+markdowns/
+
+# Model outputs
+trocr_finetuned/
+*.pt
+*.bin
+*.ckpt
+
+# Logs / temp
+*.log
+*.tmp
+
+# OS
+.DS_Store

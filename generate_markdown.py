@@ -8,17 +8,6 @@ Merges:
 - pix2tex math OCR (from math_ocr/<page>/<page>_math_ocr.csv)
 into a per-page Markdown file.
 
-Folder assumptions (customizable via args):
-  lines_root/<page_name>/
-    <page_name>_text_lines.csv        (line_id,y0,y1,path)
-    <page_name>_trocr.csv             (image_path,line_id,text)
-  math_root/<page_name>/
-    <page_name>_math_ocr.csv          (math_id,kind,x,y,w,h,crop_path,latex)
-  img_root/
-    <page_name>.png|.jpg|.jpeg        (optional but recommended for width W)
-
-Output:
-  out_root/<page_name>.md
 
 Notes:
 - Inline math insertion is approximate (by x-position mapped to character index).
@@ -105,7 +94,7 @@ def insert_inline_segments(text: str, segments: List[Tuple[int, str]], page_w: O
         offset += 1
     out.append("".join(chars[last:]))
 
-    merged = "".join(out)
+    merged = "\n".join(out)
     # fix spaces around punctuation
     merged = re.sub(r"\s+([,.;:!?])", r"\1", merged)
     merged = re.sub(r"\s+", " ", merged).strip()

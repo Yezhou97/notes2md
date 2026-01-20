@@ -20,6 +20,13 @@ This project provides a comprehensive pipeline to convert images of pages contai
 - [Directory Structure](#directory-structure)
 - [Requirements](#requirements)
 
+## Demo
+Here is an example of the pipeline in action:
+
+| Input Page (Raw Image) | Output Markdown (Rendered) |
+| :---: | :---: |
+| <img src="assets/demo_input.png" width="300"> | <img src="assets/demo_output.png" width="300"> |
+
 ## Data Preparation
 Before training the CNN, you must generate a labeled dataset. This project includes a PyQt6-based GUI tool to make labeling efficient.
 
@@ -159,10 +166,3 @@ You can install the necessary dependencies with:
 ```Bash
 pip install -r requirements.txt
 ```
-
-## Demo
-Here is an example of the pipeline in action:
-
-| Input Page (Raw Image) | Output Markdown (Rendered) |
-| :---: | :---: |
-| <img src="assets/demo_input.png" width="300"> | <img src="assets/demo_output.png" width="300"> |
